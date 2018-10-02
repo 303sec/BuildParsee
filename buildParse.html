@@ -7,6 +7,19 @@
 a {
 	display:block;
 	margin:20px;
+	/*text-align: center;*/
+}
+
+h3 {
+	display:block;
+	margin:20px;
+	text-align: center;
+}
+
+h4 {
+	display:block;
+	margin:20px;
+	/*text-align: center;*/
 }
 </style>
 
@@ -81,26 +94,26 @@ Windows Firewall
 </h3>
 
 <h4>Firewall State</h4>
-<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
-<a href='/Firewall/DomainProfile.txt'>DomainProfile.txt</a>
-<a href='/Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
-<a href='/Firewall/PublicProfile.txt'>PublicProfile.txt</a>
+<a href='Firewall/allProfiles.txt'>allProfiles.txt</a>
+<a href='Firewall/DomainProfile.txt'>DomainProfile.txt</a>
+<a href='Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
+<a href='Firewall/PublicProfile.txt'>PublicProfile.txt</a>
 
 Firewall Notifications
-<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
-<a href='/Firewall/DomainProfile.txt'>DomainProfile.txt</a>
-<a href='/Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
-<a href='/Firewall/PublicProfile.txt'>PublicProfile.txt</a>
+<a href='Firewall/allProfiles.txt'>allProfiles.txt</a>
+<a href='Firewall/DomainProfile.txt'>DomainProfile.txt</a>
+<a href='Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
+<a href='Firewall/PublicProfile.txt'>PublicProfile.txt</a>
 
 <h4>Apply Local Firewall Rules</h4>
-<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
+<a href='Firewall/allProfiles.txt'>allProfiles.txt</a>
 
 <h4>Firewall Rules</h4>
-<a href='/Firewall/allRules.txt'>allRules.txt</a>
+<a href='Firewall/allRules.txt'>allRules.txt</a>
 
 Default Rules
-<a href='/Firewall/allRules.txt'>allRules.txt</a>
-<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
+<a href='Firewall/allRules.txt'>allRules.txt</a>
+<a href='Firewall/allProfiles.txt'>allProfiles.txt</a>
 
 ICMP Exceptions
 Unknown
@@ -155,11 +168,11 @@ Security Configuration Options
 </h3>
 
 <h4>Ensure Default Accounts are Renamed</h4>
-<a href='LocalPolicies/localUsers.txt'>localUsers.txt</a>
-<a href='LocalPolicies/localAdmins.txt'>localAdmins.txt</a>
+<a href='LocalPolicies/LocalUsers.txt'>localUsers.txt</a>
+<a href='LocalPolicies/LocalAdmins.txt'>localAdmins.txt</a>
 
 <h4>Ensure Guest Account is Disabled</h4>
-<a href='LocalPolicies/localGuest.txt'>localGuest.txt</a>
+<a href='LocalPolicies/BuiltinGuest.txt'>BuiltInGuest.txt</a>
 Alternative: 
 wmic useraccount where "SID like '%-501'" get name, sid, domain, disabled
 
@@ -194,7 +207,7 @@ Domain Communication Security:
 <a href='AdministrativeTemplates/DisableCAD.txt'>DisableCAD.txt</a>
 <a href='AdministrativeTemplates/CachedLogonsCount.txt'>CachedLogonsCount.txt</a>
 <a href='AdministrativeTemplates/ForceUnlockLogon.txt'>ForceUnlockLogon.txt</a>
-<a href='AdministrativeTemplates/ScRemoveOption.txt'>ScRemoveOption.txt</a>
+<a href='AdministrativeTemplates/scremoveoption.txt'>ScRemoveOption.txt</a>
 <a href='AdministrativeTemplates/LegalNoticeText.txt'>LegalNoticeText.txt</a>
 <a href='AdministrativeTemplates/LegalNoticeCaption.txt'>LegalNoticeCaption.txt</a>
 
@@ -202,10 +215,10 @@ SMB Security Settings:
 <a href='AdministrativeTemplates/RequireSecuritySignature.txt'>RequireSecuritySignature.txt</a>
 <a href='AdministrativeTemplates/EnableSecuritySignature.txt'>EnableSecuritySignature.txt</a>
 <a href='AdministrativeTemplates/EnablePlainTextPassword.txt'>EnablePlainTextPassword.txt</a>
-<a href='AdministrativeTemplates/AutoDisconnect.txt'>AutoDisconnect.txt</a>
+<a href='AdministrativeTemplates/autodisconnect.txt'>AutoDisconnect.txt</a>
 <a href='AdministrativeTemplates/RequireSecuritySignature.txt'>RequireSecuritySignature.txt</a>
 <a href='AdministrativeTemplates/EnableSecuritySignature.txt'>EnableSecuritySignature.txt</a>
-<a href='AdministrativeTemplates/EnableForcedLogOff.txt'>EnableForcedLogOff.txt</a>
+<a href='AdministrativeTemplates/enableforcedlogoff.txt'>EnableForcedLogOff.txt</a>
 
 <h4>Network Access Controls</h4>
 <a href='LocalPolicies/gpresult.html'>gpresult.html</a>
@@ -217,7 +230,7 @@ SMB Security Settings:
 
 HKLM\System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths\MachineAdministrativeTemplates/
 
-<a href='AdministrativeTemplates/RestrictNullSessAccess.txt'>RestrictNullSessAccess.txt</a>
+<a href='AdministrativeTemplates/restrictnullsessaccess.txt'>RestrictNullSessAccess.txt</a>
 <a href='AdministrativeTemplates/NullSessionShares.txt'>NullSessionShares.txt</a>
 <a href='AdministrativeTemplates/ForceGuest.txt'>ForceGuest.txt</a>
 
@@ -240,7 +253,8 @@ Microsoft Solutions for Security group (MSS) Settings
 <a href='AdministrativeTemplates/PerformRouterDiscovery.txt'>PerformRouterDiscovery.txt</a>
 <a href='AdministrativeTemplates/SafeDllSearchMode.txt'>SafeDllSearchMode.txt</a>
 <a href='AdministrativeTemplates/ScreenSaverGracePeriod.txt'>ScreenSaverGracePeriod.txt</a>
-<a href='AdministrativeTemplates/TCPMaxDataRetransmissions.txt'>TCPMaxDataRetransmissions.txt</a>
+<a href='AdministrativeTemplates/TcpMaxDataRetransmissions-IP4.txt'>TCPMaxDataRetransmissions.txt</a>
+<a href='AdministrativeTemplates/TcpMaxDataRetransmissions-IP6.txt'>TCPMaxDataRetransmissions.txt</a>
 <a href='AdministrativeTemplates/WarningLevel.txt'>WarningLevel.txt</a>
 
 <h4>Remote Assistance Settings</h4>
@@ -281,7 +295,7 @@ Internet Communcations
 </h3>
 
 <h4>HTTP Printing</h4>
-<a href='/AdministrativeTemplates/DisableHTTPPrinting.txt'>DisableHTTPPrinting.txt</a>
+<a href='AdministrativeTemplates/DisableHTTPPrinting.txt'>DisableHTTPPrinting.txt</a>
 
 <hr>
 <h3>
@@ -291,7 +305,7 @@ User Policies
 <h4>Screensaver Security</h4>
 Many of these are broken.
 
-<a href='AdministrativeTemplates/ScreenSaverTimeout.txt'>ScreenSaverTimeout.txt</a>
+<a href='AdministrativeTemplates/ScreensaverTimeout.txt'>ScreenSaverTimeout.txt</a>
 <a href='AdministrativeTemplates/InactivityTimeoutSecs.txt'>InactivityTimeoutSecs.txt</a>
 <a href='AdministrativeTemplates/ScreenSaveTimeOut.txt'>ScreenSaveTimeOut.txt</a>
 <a href='AdministrativeTemplates/ScreenSaverIsSecure.txt'>ScreenSaverIsSecure.txt</a>
@@ -319,7 +333,7 @@ Full Registry & Filesystem permissions.
 
 <h4>Unquoted Service Paths</h4>
 <a href='PrivEsc/powerup.txt'>powerup.txt</a>
-<a href='PrivEsc/unquoted-servicepath.txt'>servicepath.txt</a>
+<a href='PrivEsc/unquotedservices.txt'>servicepath.txt</a>
 
 <h4>Registry Permissions</h4>
 grep -irHP "^(\\S+|  rw .*?\\\\users|  rw .*everyone|  rw .*\\\\authenticated users)" Permissions/* | pcregrep -M -i "^(\\S+\\.txt):(\\S).*?[\\r\\n]+\\1:  rw"
