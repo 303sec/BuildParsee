@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+
+<style>
+a {
+	display:block;
+	margin:20px;
+}
+</style>
+
+	<html>
+	<body>
+
+<hr>
+<h3>
+Account Policies
+</h3>
+
+<h4>Enforce Password History</h4>
+<a href='AccountPolicies/gen-net-accounts.txt'>accounts.txt</a>
+
+<h4>Password Age</h4>
+<a href='AccountPolicies/gen-net-accounts.txt'>accounts.txt</a>
+
+<h4>Password Policy</h4>
+<a href='AccountPolicies/gen-net-accounts.txt'>accounts.txt</a>
+
+<h4>Passwords Should Be Stored Securely</h4>
+<a href='AdministrativeTemplates/EnablePlainTextPassword.txt'>EnablePlainTextPassword.txt</a>
+
+<h4>Account Lockouts</h4>
+<a href='AccountPolicies/gen-net-accounts.txt'>accounts.txt</a>
+
+<h4>User Logon Restrictions (Server 2008 and later)</h4>
+Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\Enforce user logon restrictions
+(Unknown)
+
+Computer Clock Synchronisation Tolerance
+Unknown
+
+Maximum KerberosTicket Lifetime
+Unknown
+
+<h4>User Logons and Logoffs Audited</h4>
+<a href='AuditingAndLogging/AuditPolicies.txt'>AuditPolicies.txt</a>
+
+Appropriate Events Audited
+Please refer to the wiki for guidance.
+
+Failsafe if Security Events Unable To Be Audited
+<a href='AuditingAndLogging/CrashOnAuditFail.txt'>CrashOnAuditFail.txt</a>
+
+<hr>
+<h3>
+System Logging
+</h3>
+
+Review Maximum Event Log Size
+
+<a href='AuditingAndLogging/EventLog/Sizes/application.txt'>application.txt</a>
+<a href='AuditingAndLogging/EventLog/Sizes/security.txt'>security.txt</a>
+<a href='AuditingAndLogging/EventLog/Sizes/system.txt'>system.txt</a>
+
+Old Log Retainment Policy
+
+<a href='AuditingAndLogging/EventLog/Retention/application.txt'>application.txt</a>
+<a href='AuditingAndLogging/EventLog/Retention/security.txt'>security.txt</a>
+<a href='AuditingAndLogging/EventLog/Retention/system.txt'>system.txt</a>
+
+Centralised Logging
+Ask Client
+
+Are Log Files Regularly Reviewed?
+Ask Client
+
+<hr>
+<h3>
+Windows Firewall
+</h3>
+
+<h4>Firewall State</h4>
+<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
+<a href='/Firewall/DomainProfile.txt'>DomainProfile.txt</a>
+<a href='/Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
+<a href='/Firewall/PublicProfile.txt'>PublicProfile.txt</a>
+
+Firewall Notifications
+<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
+<a href='/Firewall/DomainProfile.txt'>DomainProfile.txt</a>
+<a href='/Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
+<a href='/Firewall/PublicProfile.txt'>PublicProfile.txt</a>
+
+<h4>Apply Local Firewall Rules</h4>
+<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
+
+<h4>Firewall Rules</h4>
+<a href='/Firewall/allRules.txt'>allRules.txt</a>
+
+Default Rules
+<a href='/Firewall/allRules.txt'>allRules.txt</a>
+<a href='/Firewall/allProfiles.txt'>allProfiles.txt</a>
+
+ICMP Exceptions
+Unknown
+
+<hr>
+<h3>
+Software Updates
+</h3>
+
+Automatic Updates
+<a href='SoftwareUpdates/AutomaticUpdates.txt'>AutomaticUpdates.txt</a>
+
+Are All Security Related Windows Updates Installed?
+<a href='SoftwareUpdates/AutomaticUpdates.txt'>SoftwareUpdates/MissingSecurityUpdates.xml</a>
+
+<h4>Is Third Party Software Up To Date</h4>
+<a href='SoftwareUpdates/InstalledSoftware.txt'>InstalledSoftware.txt</a>
+
+Is The Operating System Supported?
+<a href='SoftwareUpdates/windows-version.txt'>version.txt</a>
+
+<h4>Insecure WSUS Configuration</h4>
+<h4>(Possibly)</h4>
+<a href='SoftwareUpdates/wsus-date.txt'>date.txt</a>
+
+<hr>
+<h3>
+User Account Control
+</h3>
+
+<h4>Use Admin Approval Mode for all Administrator Accounts</h4>
+<a href='LocalPolicies/FilterAdministratorToken.txt'>FilterAdminstratorToken.txt</a>
+
+<h4>Behaviour of Elevation Prompt for Administrators</h4>
+<a href='LocalPolicies/ConsentPromptBehaviourAdmin.txt'>ConsentPromptBehaviourAdmin.txt</a>
+
+<h4>Behaviour of Elevation Prompt for Standard Users</h4>
+<a href='LocalPolicies/ConsentPromptBehaviourUser.txt'>ConsentPromptBehaviourUser.txt</a>
+
+<h4>Detect Application Installations and Prompt for Elevation</h4>
+<a href='LocalPolicies/EnableInstallerDetection.txt'>EnableInstallerDetection.txt</a>
+
+<h4>Only Elevate UIAccess Applications That Are Installed In Secure Locations</h4>
+<a href='LocalPolicies/EnableSecureUIAPaths.txt'>EnableSecureUIAPaths.txt</a>
+
+<h4>Switch to the Secure Desktop When Prompting for Elevation</h4>
+<a href='LocalPolicies/PromptOnSecureDesktop.txt'>PromptOnSecureDesktop.txt</a>
+
+<hr>
+<h3>
+Security Configuration Options
+</h3>
+
+<h4>Ensure Default Accounts are Renamed</h4>
+<a href='LocalPolicies/localUsers.txt'>localUsers.txt</a>
+<a href='LocalPolicies/localAdmins.txt'>localAdmins.txt</a>
+
+<h4>Ensure Guest Account is Disabled</h4>
+<a href='LocalPolicies/localGuest.txt'>localGuest.txt</a>
+Alternative: 
+wmic useraccount where "SID like '%-501'" get name, sid, domain, disabled
+
+<h4>Ensure local accounts with blank passwords can logon only via the console</h4>
+<a href='LocalPolicies/BlankPasswordUse.txt'>BlankPasswordUse.txt</a>
+
+<h4>Remote Access to Removable Media</h4>
+Unknown
+
+<h4>Ensure Only Administrators Can Eject NTFS Formatted Media</h4>
+<a href='AdministrativeTemplates/AllocateDASD.txt'>AllocateDASD.txt</a>
+
+Prevent Users from Installing Printer Drivers: 
+<a href='PrivEsc/AddPrinterDrivers.txt'>AddPrinterDrivers.txt</a>
+
+Domain Communication Security: 
+<a href='AdministrativeTemplates/RequireSignOrSeal.txt'>RequireSignOrSeal.txt</a>
+<a href='AdministrativeTemplates/SealSecureChannel.txt'>SealSecureChannel.txt</a>
+<a href='AdministrativeTemplates/SignSecureChannel.txt'>SignSecureChannel.txt</a>
+<a href='AdministrativeTemplates/RequireStrongKey.txt'>RequireStrongKey.txt</a>
+
+<h4>Domain Computer Security</h4>
+<a href='AdministrativeTemplates/DisablePasswordChange.txt'>DisablePasswordChange.txt</a>
+<a href='AccountPolicies/gen-net-accounts.txt'>accounts.txt</a>
+<a href='AdministrativeTemplates/SubmitControl.txt'>SubmitControl.txt</a>
+<a href='AdministrativeTemplates/LDAPServerIntegrity.txt'>LDAPServerIntegrity.txt</a>
+<a href='AdministrativeTemplates/LDAPClientIntegrity.txt'>LDAPClientIntegrity.txt</a>
+<a href='AdministrativeTemplates/RefusePasswordChange.txt'>RefusePasswordChange.txt</a>
+
+<h4>Interactive Logon Settings</h4>
+<a href='AdministrativeTemplates/DontDisplayLastUserName.txt'>DontDisplayLastUserName.txt</a>
+<a href='AdministrativeTemplates/DisableCAD.txt'>DisableCAD.txt</a>
+<a href='AdministrativeTemplates/CachedLogonsCount.txt'>CachedLogonsCount.txt</a>
+<a href='AdministrativeTemplates/ForceUnlockLogon.txt'>ForceUnlockLogon.txt</a>
+<a href='AdministrativeTemplates/ScRemoveOption.txt'>ScRemoveOption.txt</a>
+<a href='AdministrativeTemplates/LegalNoticeText.txt'>LegalNoticeText.txt</a>
+<a href='AdministrativeTemplates/LegalNoticeCaption.txt'>LegalNoticeCaption.txt</a>
+
+SMB Security Settings: 
+<a href='AdministrativeTemplates/RequireSecuritySignature.txt'>RequireSecuritySignature.txt</a>
+<a href='AdministrativeTemplates/EnableSecuritySignature.txt'>EnableSecuritySignature.txt</a>
+<a href='AdministrativeTemplates/EnablePlainTextPassword.txt'>EnablePlainTextPassword.txt</a>
+<a href='AdministrativeTemplates/AutoDisconnect.txt'>AutoDisconnect.txt</a>
+<a href='AdministrativeTemplates/RequireSecuritySignature.txt'>RequireSecuritySignature.txt</a>
+<a href='AdministrativeTemplates/EnableSecuritySignature.txt'>EnableSecuritySignature.txt</a>
+<a href='AdministrativeTemplates/EnableForcedLogOff.txt'>EnableForcedLogOff.txt</a>
+
+<h4>Network Access Controls</h4>
+<a href='LocalPolicies/gpresult.html'>gpresult.html</a>
+<a href='AdministrativeTemplates/RestrictAnonymousSAM.txt'>RestrictAnonymousSAM.txt</a>
+<a href='AdministrativeTemplates/RestrictAnonymous.txt'>RestrictAnonymous.txt</a>
+<a href='AdministrativeTemplates/DisableDomainCreds.txt'>DisableDomainCreds.txt</a>
+<a href='AdministrativeTemplates/EveryoneIncludesAnonymous.txt'>EveryoneIncludesAnonymous.txt</a>
+<a href='AdministrativeTemplates/NullSessionPipes.txt'>NullSessionPipes.txt</a>
+
+HKLM\System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths\MachineAdministrativeTemplates/
+
+<a href='AdministrativeTemplates/RestrictNullSessAccess.txt'>RestrictNullSessAccess.txt</a>
+<a href='AdministrativeTemplates/NullSessionShares.txt'>NullSessionShares.txt</a>
+<a href='AdministrativeTemplates/ForceGuest.txt'>ForceGuest.txt</a>
+
+<h4>Network Security</h4>
+AdministrativeTemplates/NoLMHash
+<a href='AdministrativeTemplates/LmCompatibilityLevel.txt'>LmCompatibilityLevel.txt</a>
+<a href='AdministrativeTemplates/LDAPClientIntegrity.txt'>LDAPClientIntegrity.txt</a>
+<a href='AdministrativeTemplates/NTLMMinClientSec.txt'>NTLMMinClientSec.txt</a>
+<a href='AdministrativeTemplates/NTLMMinServerSec.txt'>NTLMMinServerSec.txt</a>
+
+Microsoft Solutions for Security group (MSS) Settings
+
+<a href='AdministrativeTemplates/AutoAdminLogon.txt'>AutoAdminLogon.txt</a>
+<a href='AdministrativeTemplates/DisableIPSourceRouting.txt'>DisableIPSourceRouting.txt</a>
+<a href='AdministrativeTemplates/EnableICMPRedirect.txt'>EnableICMPRedirect.txt</a>
+<a href='AdministrativeTemplates/KeepAliveTime.txt'>KeepAliveTime.txt</a>
+<a href='AdministrativeTemplates/NoDefaultExempt.txt'>NoDefaultExempt.txt</a>
+<a href='AdministrativeTemplates/NoNameReleaseOnDemand.txt'>NoNameReleaseOnDemand.txt</a>
+<a href='AdministrativeTemplates/NtfsDisable8dot3NameCreation.txt'>NtfsDisable8dot3NameCreation.txt</a>
+<a href='AdministrativeTemplates/PerformRouterDiscovery.txt'>PerformRouterDiscovery.txt</a>
+<a href='AdministrativeTemplates/SafeDllSearchMode.txt'>SafeDllSearchMode.txt</a>
+<a href='AdministrativeTemplates/ScreenSaverGracePeriod.txt'>ScreenSaverGracePeriod.txt</a>
+<a href='AdministrativeTemplates/TCPMaxDataRetransmissions.txt'>TCPMaxDataRetransmissions.txt</a>
+<a href='AdministrativeTemplates/WarningLevel.txt'>WarningLevel.txt</a>
+
+<h4>Remote Assistance Settings</h4>
+
+AdministrativeTemplates/fAllowToGetHelp
+AdministrativeTemplates/fAllowUnsolicited
+
+Ensure Data Execution Prevention (DEP) is enabled: 
+
+<a href='SecurityConfigurationOptions/DataExecutionPrevention_SupportPolicy.txt'>DataExecutionPrevention_SupportPolicy.txt</a>
+
+Check HKLM\Software\Policies\Microsoft\Windows\WinRM\Service\WinRS\AllowRemoteShellAccess = 0 (default is undefined which is equivalent to disabled)
+
+<h4>Startup Settings</h4>
+<a href='AdministrativeTemplates/DisableLocalMachineRunOnce.txt'>DisableLocalMachineRunOnce.txt</a>
+<a href='AdministrativeTemplates/DisableLocalMachineRun.txt'>DisableLocalMachineRun.txt</a>
+
+SMBv1 Status
+
+<a href='SecurityConfigurationOptions/smb1-sc-qc.txt'>qc.txt</a>
+
+<h4>Review Requirement for Remote Desktop</h4>
+<a href='AdministrativeTemplates/NoRDS.txt'>NoRDS.txt</a>
+
+<h4>Password Security</h4>
+<a href='AdministrativeTemplates/DisablePasswordSaving.txt'>DisablePasswordSaving.txt</a>
+<a href='AdministrativeTemplates/fPromptForPassword.txt'>fPromptForPassword.txt</a>
+
+Remote Desktop Encrption: 
+<a href='AdministrativeTemplates/MinEncryptionLevel.txt'>MinEncryptionLevel.txt</a>
+<a href='AdministrativeTemplates/SecurityLayer.txt'>SecurityLayer.txt</a>
+<a href='AdministrativeTemplates/UserAuthentication.txt'>UserAuthentication.txt</a>
+<a href='AdministrativeTemplates/RDP-Tcp.txt'>Tcp.txt</a>
+
+<hr>
+<h3>
+Internet Communcations
+</h3>
+
+<h4>HTTP Printing</h4>
+<a href='/AdministrativeTemplates/DisableHTTPPrinting.txt'>DisableHTTPPrinting.txt</a>
+
+<hr>
+<h3>
+User Policies
+</h3>
+
+<h4>Screensaver Security</h4>
+Many of these are broken.
+
+<a href='AdministrativeTemplates/ScreenSaverTimeout.txt'>ScreenSaverTimeout.txt</a>
+<a href='AdministrativeTemplates/InactivityTimeoutSecs.txt'>InactivityTimeoutSecs.txt</a>
+<a href='AdministrativeTemplates/ScreenSaveTimeOut.txt'>ScreenSaveTimeOut.txt</a>
+<a href='AdministrativeTemplates/ScreenSaverIsSecure.txt'>ScreenSaverIsSecure.txt</a>
+<a href='AdministrativeTemplates/ScreenSaveActive.txt'>ScreenSaveActive.txt</a>
+
+<hr>
+<h3>
+Virus Protection
+</h3>
+
+Manually Tested.
+
+<hr>
+<h3>
+Priv Esc
+</h3>
+
+/PrivEsc
+
+<h4>File Permissions</h4>
+grep -irHP "^(\\S+|  rw .*?\\\\users|  rw .*everyone|  rw .*\\\\authenticated users)" Permissions/* | pcregrep -M -i "^(\\S+\\.txt):(\\S).*?[\\r\\n]+\\1:  rw"
+
+Permissions/*
+Full Registry & Filesystem permissions.
+
+<h4>Unquoted Service Paths</h4>
+<a href='PrivEsc/powerup.txt'>powerup.txt</a>
+<a href='PrivEsc/unquoted-servicepath.txt'>servicepath.txt</a>
+
+<h4>Registry Permissions</h4>
+grep -irHP "^(\\S+|  rw .*?\\\\users|  rw .*everyone|  rw .*\\\\authenticated users)" Permissions/* | pcregrep -M -i "^(\\S+\\.txt):(\\S).*?[\\r\\n]+\\1:  rw"
+<a href='PrivEsc/privesc-registry.html'>registry.html</a>
+
+<h4>DLL hijacking</h4>
+<a href='PrivEsc/CWDIllegalInDllSearch.txt'>CWDIllegalInDllSearch.txt</a>
+
+<h4>DLL Preloading Attacks</h4>
+<a href='PrivEsc/CWDIllegalInDllSearch.txt'>CWDIllegalInDllSearch.txt</a>
+
+<h4>LNK File Properties</h4>
+run the enumlnkfiles.vbs script
+
+</body>
+</html>
