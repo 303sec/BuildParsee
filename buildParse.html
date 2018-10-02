@@ -50,42 +50,42 @@ Account Policies
 Computer Configuration\Windows Settings\Security Settings\Account Policies\Kerberos Policy\Enforce user logon restrictions
 (Unknown)
 
-Computer Clock Synchronisation Tolerance
+<h4>Computer Clock Synchronisation Tolerance</h4>
 Unknown
 
-Maximum KerberosTicket Lifetime
+<h4>Maximum KerberosTicket Lifetime</h4>
 Unknown
-
-<h4>User Logons and Logoffs Audited</h4>
-<a href='AuditingAndLogging/AuditPolicies.txt'>AuditPolicies.txt</a>
-
-Appropriate Events Audited
-Please refer to the wiki for guidance.
-
-Failsafe if Security Events Unable To Be Audited
-<a href='AuditingAndLogging/CrashOnAuditFail.txt'>CrashOnAuditFail.txt</a>
 
 <hr>
 <h3>
 System Logging
 </h3>
 
-Review Maximum Event Log Size
+<h4>User Logons and Logoffs Audited</h4>
+<a href='AuditingAndLogging/AuditPolicies.txt'>AuditPolicies.txt</a>
+
+<h4>Appropriate Events Audited</h4>
+<p>Please refer to the wiki for guidance.</p>
+
+<h4>Failsafe if Security Events Unable To Be Audited</h4>
+<a href='AuditingAndLogging/CrashOnAuditFail.txt'>CrashOnAuditFail.txt</a>
+
+<h4>Review Maximum Event Log Size</h4>
 
 <a href='AuditingAndLogging/EventLog/Sizes/application.txt'>application.txt</a>
 <a href='AuditingAndLogging/EventLog/Sizes/security.txt'>security.txt</a>
 <a href='AuditingAndLogging/EventLog/Sizes/system.txt'>system.txt</a>
 
-Old Log Retainment Policy
+<h4>Old Log Retainment Policy</h4>
 
 <a href='AuditingAndLogging/EventLog/Retention/application.txt'>application.txt</a>
 <a href='AuditingAndLogging/EventLog/Retention/security.txt'>security.txt</a>
 <a href='AuditingAndLogging/EventLog/Retention/system.txt'>system.txt</a>
 
-Centralised Logging
+<h4>Centralised Logging</h4>
 Ask Client
 
-Are Log Files Regularly Reviewed?
+<h4>Are Log Files Regularly Reviewed?</h4>
 Ask Client
 
 <hr>
@@ -99,7 +99,7 @@ Windows Firewall
 <a href='Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
 <a href='Firewall/PublicProfile.txt'>PublicProfile.txt</a>
 
-Firewall Notifications
+<h4>Firewall Notifications</h4>
 <a href='Firewall/allProfiles.txt'>allProfiles.txt</a>
 <a href='Firewall/DomainProfile.txt'>DomainProfile.txt</a>
 <a href='Firewall/PrivateProfile.txt'>PrivateProfile.txt</a>
@@ -111,11 +111,11 @@ Firewall Notifications
 <h4>Firewall Rules</h4>
 <a href='Firewall/allRules.txt'>allRules.txt</a>
 
-Default Rules
+<h4>Default Rules</h4>
 <a href='Firewall/allRules.txt'>allRules.txt</a>
 <a href='Firewall/allProfiles.txt'>allProfiles.txt</a>
 
-ICMP Exceptions
+<h4>ICMP Exceptions</h4>
 Unknown
 
 <hr>
@@ -123,16 +123,16 @@ Unknown
 Software Updates
 </h3>
 
-Automatic Updates
+<h4>Automatic Updates</h4>
 <a href='SoftwareUpdates/AutomaticUpdates.txt'>AutomaticUpdates.txt</a>
 
-Are All Security Related Windows Updates Installed?
+<h4>Are All Security Related Windows Updates Installed?</h4>
 <a href='SoftwareUpdates/AutomaticUpdates.txt'>SoftwareUpdates/MissingSecurityUpdates.xml</a>
 
 <h4>Is Third Party Software Up To Date</h4>
 <a href='SoftwareUpdates/InstalledSoftware.txt'>InstalledSoftware.txt</a>
 
-Is The Operating System Supported?
+<h4>Is The Operating System Supported?</h4>
 <a href='SoftwareUpdates/windows-version.txt'>version.txt</a>
 
 <h4>Insecure WSUS Configuration</h4>
@@ -185,10 +185,10 @@ Unknown
 <h4>Ensure Only Administrators Can Eject NTFS Formatted Media</h4>
 <a href='AdministrativeTemplates/AllocateDASD.txt'>AllocateDASD.txt</a>
 
-Prevent Users from Installing Printer Drivers: 
+<h4>Prevent Users from Installing Printer Drivers: 
 <a href='PrivEsc/AddPrinterDrivers.txt'>AddPrinterDrivers.txt</a>
 
-Domain Communication Security: 
+<h4>Domain Communication Security: 
 <a href='AdministrativeTemplates/RequireSignOrSeal.txt'>RequireSignOrSeal.txt</a>
 <a href='AdministrativeTemplates/SealSecureChannel.txt'>SealSecureChannel.txt</a>
 <a href='AdministrativeTemplates/SignSecureChannel.txt'>SignSecureChannel.txt</a>
@@ -211,7 +211,7 @@ Domain Communication Security:
 <a href='AdministrativeTemplates/LegalNoticeText.txt'>LegalNoticeText.txt</a>
 <a href='AdministrativeTemplates/LegalNoticeCaption.txt'>LegalNoticeCaption.txt</a>
 
-SMB Security Settings: 
+<h4>SMB Security Settings:</h4> 
 <a href='AdministrativeTemplates/RequireSecuritySignature.txt'>RequireSecuritySignature.txt</a>
 <a href='AdministrativeTemplates/EnableSecuritySignature.txt'>EnableSecuritySignature.txt</a>
 <a href='AdministrativeTemplates/EnablePlainTextPassword.txt'>EnablePlainTextPassword.txt</a>
@@ -235,13 +235,13 @@ HKLM\System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths\Mach
 <a href='AdministrativeTemplates/ForceGuest.txt'>ForceGuest.txt</a>
 
 <h4>Network Security</h4>
-AdministrativeTemplates/NoLMHash
+<a href='AdministrativeTemplates/NoLMHash.txt'>AdministrativeTemplates/NoLMHash.txt</a>
 <a href='AdministrativeTemplates/LmCompatibilityLevel.txt'>LmCompatibilityLevel.txt</a>
 <a href='AdministrativeTemplates/LDAPClientIntegrity.txt'>LDAPClientIntegrity.txt</a>
 <a href='AdministrativeTemplates/NTLMMinClientSec.txt'>NTLMMinClientSec.txt</a>
 <a href='AdministrativeTemplates/NTLMMinServerSec.txt'>NTLMMinServerSec.txt</a>
 
-Microsoft Solutions for Security group (MSS) Settings
+<h4>Microsoft Solutions for Security group (MSS) Settings</h4>
 
 <a href='AdministrativeTemplates/AutoAdminLogon.txt'>AutoAdminLogon.txt</a>
 <a href='AdministrativeTemplates/DisableIPSourceRouting.txt'>DisableIPSourceRouting.txt</a>
@@ -272,7 +272,7 @@ Check HKLM\Software\Policies\Microsoft\Windows\WinRM\Service\WinRS\AllowRemoteSh
 <a href='AdministrativeTemplates/DisableLocalMachineRunOnce.txt'>DisableLocalMachineRunOnce.txt</a>
 <a href='AdministrativeTemplates/DisableLocalMachineRun.txt'>DisableLocalMachineRun.txt</a>
 
-SMBv1 Status
+<h4>SMBv1 Status</h4>
 
 <a href='SecurityConfigurationOptions/smb1-sc-qc.txt'>qc.txt</a>
 
@@ -283,7 +283,7 @@ SMBv1 Status
 <a href='AdministrativeTemplates/DisablePasswordSaving.txt'>DisablePasswordSaving.txt</a>
 <a href='AdministrativeTemplates/fPromptForPassword.txt'>fPromptForPassword.txt</a>
 
-Remote Desktop Encrption: 
+<h4>Remote Desktop Encrption: </h4>
 <a href='AdministrativeTemplates/MinEncryptionLevel.txt'>MinEncryptionLevel.txt</a>
 <a href='AdministrativeTemplates/SecurityLayer.txt'>SecurityLayer.txt</a>
 <a href='AdministrativeTemplates/UserAuthentication.txt'>UserAuthentication.txt</a>
